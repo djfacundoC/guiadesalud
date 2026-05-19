@@ -1,0 +1,44 @@
+{
+  "profesionales": [
+    {
+      "id": "1",
+      "nombre": "Dr. Alejandro Martínez",
+      "especialidad": "Pediatría",
+      "localidad": "Concepción",
+      "matricula": "MP 4502",
+      "plan_id": 3,
+      "slug": "alejandro-martinez",
+      "foto_url": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "2",
+      "nombre": "Dra. Laura Gómez",
+      "especialidad": "Cardiología",
+      "localidad": "Aguilares",
+      "matricula": "MP 7891",
+      "plan_id": 1,
+      "slug": "laura-gomez",
+      "foto_url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "3",
+      "nombre": "Dr. Carlos Rossi",
+      "especialidad": "Dermatología",
+      "localidad": "Monteros",
+      "matricula": "MP 9942",
+      "plan_id": 2,
+      "slug": "carlos-rossi",
+      "foto_url": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "4",
+      "nombre": "Dra. Sofía Terán",
+      "especialidad": "Pediatría",
+      "localidad": "Concepción",
+      "matricula": "MP 5521",
+      "plan_id": 2,
+      "slug": "sofia-teran",
+      "foto_url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&h=200&fit=crop"
+    }
+  ]
+}
