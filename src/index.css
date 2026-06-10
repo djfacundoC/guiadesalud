@@ -1,17 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   /* Definimos tus colores exactos del logo */
-  --color-brand-primary: #198692;
-  --color-brand-secondary: #45BCAA;
+  --color-brand-primary: #15818E;
+  --color-brand-secondary: #4BBEAD;
+  --color-brand-tertiary: #0D3954;
   
   /* Opcional: Crear una escala de grises más profesional */
   --color-slate-950: #0f172a;
+
+  --font-sans: 'Encode Sans', sans-serif;
 }
 
 /* Aplicamos una fuente más moderna si lo deseas */
 body {
-  @apply font-sans text-slate-900 antialiased;
+  /* @apply font-sans text-slate-900 antialiased; */
+  font-family: var(--font-sans);
 }
 
 /* :root {
