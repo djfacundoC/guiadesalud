@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: 'Centros', href: '/centros' },
     { name: 'Farmacias', href: '/farmacias' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Registro Profesional', href: '/registro-profesional' },
   ];
 
   return (

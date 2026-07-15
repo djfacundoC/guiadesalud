@@ -271,6 +271,7 @@ export default function RegistroProfesional() {
    const opcionesEspecialidades = useMemo(() => ESPECIALIDADES, []);
    const opcionesObras = useMemo(() => OBRAS_SOCIALES, []);
    const opcionesConsulta = useMemo(() => TIPOS_CONSULTA, []);
+   const [especialidadesVisible, setEspecialidadesVisible] = useState(10);
 
    return (
       <div className="min-h-screen bg-slate-50 py-12 px-4">
@@ -580,10 +581,30 @@ export default function RegistroProfesional() {
                         <div className="rounded-3xl bg-blue-800/90 p-5 border border-blue-500/20">
                            <p className="text-sm font-semibold text-blue-100">Especialidades incluidas</p>
                            <ul className="mt-3 space-y-1 text-xs text-slate-200 max-h-48 overflow-y-auto">
-                              {opcionesEspecialidades.slice(0, 10).map((item) => (
+                              {opcionesEspecialidades.slice(0, especialidadesVisible).map((item) => (
                                  <li key={item}>• {item}</li>
                               ))}
-                              <li className="text-slate-400 italic">+ {opcionesEspecialidades.length - 10} más</li>
+                              {opcionesEspecialidades.length > especialidadesVisible ? (
+                                 <li>
+                                    <button
+                                       type="button"
+                                       onClick={() => setEspecialidadesVisible((v) => Math.min(opcionesEspecialidades.length, v + 10))}
+                                       className="text-slate-400 italic hover:underline"
+                                    >
+                                       + Ver 10 más
+                                    </button>
+                                 </li>
+                              ) : opcionesEspecialidades.length > 10 ? (
+                                 <li>
+                                    <button
+                                       type="button"
+                                       onClick={() => setEspecialidadesVisible(10)}
+                                       className="text-slate-400 italic hover:underline"
+                                    >
+                                       Mostrar menos
+                                    </button>
+                                 </li>
+                              ) : null}
                            </ul>
                         </div>
 
