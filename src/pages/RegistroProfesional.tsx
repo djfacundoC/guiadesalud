@@ -1,4 +1,5 @@
-import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
+import { type FormEvent } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Mail, MapPin, User, Clock, Plus, Trash2 } from 'lucide-react';
 
@@ -294,7 +295,7 @@ export default function RegistroProfesional() {
                         <label className="space-y-2 text-sm font-medium text-slate-700">
                            Nombre completo
                            <input
-                              ref={(el) => (fieldRefs.current.nombre = el)}
+                              ref={(el) => { fieldRefs.current.nombre = el }}
                               value={form.nombre}
                               onChange={(e) => handleChange('nombre', e.target.value)}
                               className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
@@ -307,7 +308,7 @@ export default function RegistroProfesional() {
                            Email profesional
                            <div className="relative">
                               <input
-                                 ref={(el) => (fieldRefs.current.email = el)}
+                                 ref={(el) => { fieldRefs.current.email = el }}
                                  type="email"
                                  value={form.email}
                                  onChange={(e) => handleChange('email', e.target.value)}
@@ -324,7 +325,7 @@ export default function RegistroProfesional() {
                         <label className="space-y-2 text-sm font-medium text-slate-700">
                            Teléfono
                            <input
-                              ref={(el) => (fieldRefs.current.telefono = el)}
+                              ref={(el) => { fieldRefs.current.telefono = el }}
                               value={form.telefono}
                               onChange={(e) => handleChange('telefono', e.target.value)}
                               className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
@@ -337,7 +338,7 @@ export default function RegistroProfesional() {
                            Ciudad / Localidad
                            <div className="relative">
                               <input
-                                 ref={(el) => (fieldRefs.current.ubicacion = el)}
+                                 ref={(el) => { fieldRefs.current.ubicacion = el }}
                                  value={form.ubicacion}
                                  onChange={(e) => handleChange('ubicacion', e.target.value)}
                                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
@@ -353,7 +354,7 @@ export default function RegistroProfesional() {
                         <label className="space-y-2 text-sm font-medium text-slate-700">
                            Especialidad
                            <select
-                              ref={(el) => (fieldRefs.current.especialidad = el)}
+                              ref={(el) => { fieldRefs.current.especialidad = el }}
                               multiple
                               size={6}
                               value={form.especialidad}
@@ -372,7 +373,7 @@ export default function RegistroProfesional() {
                                  <label className="space-y-2 text-sm font-medium text-slate-700">
                                     Otra especialidad
                                     <input
-                                       ref={(el) => (fieldRefs.current.especialidadOtro = el)}
+                                       ref={(el) => { fieldRefs.current.especialidadOtro = el }}
                                        value={form.especialidadOtro}
                                        onChange={(e) => handleChange('especialidadOtro', e.target.value)}
                                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
@@ -386,7 +387,7 @@ export default function RegistroProfesional() {
                         <label className="space-y-2 text-sm font-medium text-slate-700">
                            Obra social / Prepaga
                            <select
-                              ref={(el) => (fieldRefs.current.obraSocial = el)}
+                              ref={(el) => { fieldRefs.current.obraSocial = el }}
                               multiple
                               size={4}
                               value={form.obraSocial}
@@ -404,7 +405,7 @@ export default function RegistroProfesional() {
                      <label className="space-y-2 text-sm font-medium text-slate-700">
                         Tipo de consulta
                         <select
-                           ref={(el) => (fieldRefs.current.tipoConsulta = el)}
+                           ref={(el) => { fieldRefs.current.tipoConsulta = el }}
                            multiple
                            size={3}
                            value={form.tipoConsulta}
@@ -473,7 +474,7 @@ export default function RegistroProfesional() {
                                  <label className="space-y-2 text-sm font-medium text-slate-700">
                                     Hora de inicio
                                     <input
-                                       ref={(el) => (fieldRefs.current[`horario-${horario.id}-horaInicio`] = el)}
+                                       ref={(el) => { fieldRefs.current[`horario-${horario.id}-horaInicio`] = el }}
                                        type="time"
                                        value={horario.horaInicio}
                                        onChange={(e) => actualizarHorario(horario.id, 'horaInicio', e.target.value)}

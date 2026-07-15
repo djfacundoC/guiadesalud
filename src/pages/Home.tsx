@@ -6,7 +6,7 @@ export default function Home() {
    const [busqueda, setBusqueda] = useState('');
    const [especialidad, setEspecialidad] = useState('');
    const [localidad, setLocalidad] = useState('');
-   const [tipoConsulta, setTipoConsulta] = useState('');
+   // const [tipoConsulta, setTipoConsulta] = useState('');
 
    // Obtener especialidades y localidades únicas
    const especialidadesUnicas = [...new Set(mockData.profesionales.map(p => p.especialidad))];
@@ -35,7 +35,7 @@ export default function Home() {
       setBusqueda('');
       setEspecialidad('');
       setLocalidad('');
-      setTipoConsulta('');
+      // setTipoConsulta('');
    };
 
    return (
@@ -229,8 +229,9 @@ export default function Home() {
                      const esPremium = medico.plan_id === 3;
                      const esIntermedio = medico.plan_id === 2;
                      // Calificación simulada basada en ID
-                     const rating = (3.5 + (medico.id % 2 * 1.5)).toFixed(1);
-                     const numReviews = 15 + (medico.id % 20);
+                     const medicoIdNum = Number(medico.id);
+                     const rating = (3.5 + (medicoIdNum % 2 * 1.5)).toFixed(1);
+                     const numReviews = 15 + (medicoIdNum % 20);
 
                      return (
                         <div
