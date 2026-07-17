@@ -398,8 +398,10 @@ export default function RegistroProfesional() {
                                  <option key={obra} value={obra}>{obra}</option>
                               ))}
                            </select>
+                           <p className="text-xs text-slate-500">Mantén presionada la tecla Ctrl (o Cmd en Mac) para seleccionar varias opciones.</p>
                            {errors.obraSocial && <p className="text-xs text-red-500">{errors.obraSocial}</p>}
                         </label>
+
                      </div>
 
                      <label className="space-y-2 text-sm font-medium text-slate-700">
@@ -415,8 +417,7 @@ export default function RegistroProfesional() {
                            {opcionesConsulta.map((tipo) => (
                               <option key={tipo} value={tipo}>{tipo}</option>
                            ))}
-                        </select>
-                        {errors.tipoConsulta && <p className="text-xs text-red-500">{errors.tipoConsulta}</p>}
+                        </select>                           <p className="text-xs text-slate-500">Mantén presionada la tecla Ctrl (o Cmd en Mac) para seleccionar varias opciones.</p>                        {errors.tipoConsulta && <p className="text-xs text-red-500">{errors.tipoConsulta}</p>}
                      </label>
 
                      <div className="border-t border-slate-200 pt-6 mt-6">
